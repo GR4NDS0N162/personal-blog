@@ -40,9 +40,9 @@ class LoginRegisterController extends Controller
      *
      * @param Request $request
      *
-     * @return Response
+     * @return Response|RedirectResponse
      */
-    public function store(Request $request): Response
+    public function store(Request $request): Response|RedirectResponse
     {
         $request->validate([
             'name'     => 'required|string|max:250',
@@ -101,9 +101,9 @@ class LoginRegisterController extends Controller
     /**
      * Display a dashboard to authenticated users.
      *
-     * @return View|Factory|RedirectResponse
+     * @return View|Factory|Response|RedirectResponse
      */
-    public function dashboard(): View|Factory|RedirectResponse
+    public function dashboard(): View|Factory|Response|RedirectResponse
     {
         if (Auth::check()) {
             return view('auth.dashboard');
@@ -120,9 +120,9 @@ class LoginRegisterController extends Controller
      *
      * @param Request $request
      *
-     * @return Response
+     * @return Response|RedirectResponse
      */
-    public function logout(Request $request): Response
+    public function logout(Request $request): Response|RedirectResponse
     {
         Auth::logout();
         $request->session()->invalidate();
