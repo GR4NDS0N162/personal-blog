@@ -6,17 +6,31 @@ use App\Http\Controllers\Controller;
 
 class LoginRegisterController extends Controller
 {
-    public function __construct() {}
+    public function __construct()
+    {
+    }
 
-    public function register() {}
+    public function register()
+    {
+    }
 
-    public function store() {}
+    public function store()
+    {
+    }
 
-    public function login() {}
+    public function login()
+    {
+    }
 
-    public function authenticate() {}
+    public function authenticate()
+    {
+    }
 
-    public function dashboard() {}
+    public function dashboard()
+    {
+    }
 
-    public function logout() {}
+    public function logout()
+    {
+    }
 }
